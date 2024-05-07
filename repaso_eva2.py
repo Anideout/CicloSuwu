@@ -1,75 +1,117 @@
-#repaso evaluacion 2 30%
-#crear un menu
-#opcion tengo que registra un alumno
-#validar todos los campos
-#opcion 2 tengo que ver el resumen de la ficha
-#tengo que validar 1: que el usuario sea admin, 2: que el rut exista en el formulario
-#ademas, tengo que condicionar el nme para enviar un mensaje
-#opcion salir
 import time, os
 user = "admin"
-password = "admin"
-while True:
-    os.system("cls")
-    print("\t\tSistema de Gestión de Alumnos")
-    print("1. Registrar Alumno")
-    print("2. Consultar Datos de Alumno")
+contra = "1234"
+
+menu = True
+os.system("cls")
+while menu:
+    print("------Bienvenido al sistema de  gestor de alumnos!!!!--------")
+    print("1. Registrar usuario! ")
+    print("2. Consultar datos de alumnos")
     print("3. Salir")
+    
+    opc = int(input("ingrese una opcion! \n"))
     try:
-        opcion = int(input("ingrese una opcion\n"))
-        if opcion == 1:
-            os.system("cls")
-            print("REGISTRO ALUMNO")
-            #solicitar nombre y validar que no venga vacio
-            nombre = input("ingrese su nombre\n")
-            while nombre == "":
-                nombre = input("ingrese su nombre, no acepta cadena vacia\n")
-            #solicitar direccion y validar que no venga vacio
-            direccion = input("ingrese su direccion\n")
-            while direccion == "":
-                direccion = input("ingrese su direccion, no acepta cadena vacia\n")
-            #solicitar y validar rut que este entre los valores mencionados
-            rut = int(input("ingrese su rut\n"))
-            while rut <= 5000000 or rut >= 39999999:
-                rut = int(input("ingrese su rut, >= a 5M y =< 39.9M \n"))
-            #solicitar edad y validar rangos etarios
-            edad = int(input("ingrese edad\n"))
-            while edad < 17 or edad >90:
-                edad = int(input("ingrese edad\n"))
-            #solicitar correo y validar que exista al menos 1 arroba(@)
-            correo = input("ingrese su correo\n")
-            while '@' not in correo:
-                correo = input("ingrese su correo\n")
-            #solicitar NEM (debe ser decimal)
-            nem = float(input("Ingrese NEM\n"))
+        os.system("cls")
+        if opc == 1:
+            print("Registrar alumno!")
             
-        elif opcion == 2:
-            os.system("cls")
-            print("CONSULTA DATOS ALUMNO")
-            username = input("ingrese usuario\n")
-            psswrd = input("ingrese password\n")
-            if(user == username and password == psswrd):
-                rut_alumno = int(input("ingrese rut de alumno a buscar\n"))
-                if rut_alumno == rut:
-                    print(f"Nombre: {nombre}")
-                    print("Direccion: ", direccion)
-                    print(f"Edad: {edad}")
-                    print("Correo: ", correo)
-                    print(f"NEM: {nem}")
-                    if nem <= 520:
-                        print("alumno no cumple con requisitos")
+            nombre = input("ingrese su nombre por favor \n")
+            while nombre == "" or nombre == " ":
+                nombre = input("\ningrese su nombre por favor uwu no puede quedar el espacio en blanco!!!!! \n")
+                
+            direc = input("ingrese su direccion por favor uwu no puede quedar el espacio en blanco!!!!!!! \n")
+            while direc == "" or direc == " ":
+                direc = input("\ningrese la direccion po  \n")
+                    
+            banRut = True
+            while banRut:
+                os.system("cls")
+                try:
+                    rut = int(input("ingrese su rut por favor uwu, \n"))
+                    if rut >= 5000000 or rut <= 39999999:
+                        print("rut registrado correctamente ! ")
+                        banRut = False
+                        time.sleep (2)
+                        
+                except:
+                    print("rut ingresado no valido u.u recuerda NO ingresar el digito verificador y tampoco puntos por la mierda oh ")
+                        
+            banEdad = True
+            while banEdad:
+                os.system("cls")
+                try:
+                    edad = int(input("\nIngrese su edad (De 18 a 120): "))
+                    if edad > 17 and edad <= 90:
+                        print("\n¡Edad registrada exitosamente!")
+                        banEdad = False
+                        
                     else:
-                        print("alumno cumple con requisitos")
-                else:
-                    print("el rut ingresado no existe")
-                    time.sleep(3)
-                print("pulse tecla para continuar")
-                x = input()
-        elif opcion == 3:
-            os.system("cls")
-            print("SALIR")
-            break
+                        os.system("cls")
+                        print("\nLa edad no es válida, intente nuevamente.")
+                except:
+                    print("rut ingresado no valido, recuerda que no tienes que ingresar el digit verificador ni puntos uwu ")
+                    
+                
+            correo = input("\ningrese su correo electronico por favor uwu \n")
+            while '@' not in correo:
+                correo = input("ingrese correo correctamente porfavor, si ya te dije que tiene que llevar un @ loco para. \n")
+            banNem = True
+            while banNem:
+                try:
+                    nem = float(input("ingrese su nem uwu \n"))
+                    while nem:
+                        nem = float(input("ingrese su nem correctamente, no sea pao \n"))
+                        print("nem registrado con exito uwu")
+                        time.sleep(3)
+                        os.system("cls")
+                        continue
+                except:
+                    print("nem ingresado no valido, yapo si no es tan dificil tampoco xd ")
+                    
+                    
+    
+        elif opc == 2:
+            print ("Consultar datos de alumnos ! ")
+            user = input("por favor ingrese su nombre de usuario!: \n")
+            contra = input("por favor ingrese su contraseña!: \n")
+            while user == user and contra == contra:
+                print("usuario y contraseña correctos uwu")
+                print("Bienvenido adminstrador <3 ")
+                time.sleep(3)
+                os.system("cls")
+                break
             
+            banrut2 = True
+            while banrut2:
+                os.system("cls")
+                try:
+                    rutt = int(input("ingrese el rut del alumno por favor uwu: \n"))
+                    if rutt == rut:
+                        print("datos del alumno: ")
+                        print("nombre: ", {nombre})
+                        print("direccion: ", {direc})
+                        print("rut: ", {rut})
+                        print("edad: ", {edad})
+                        print("correo: ", correo)
+                        print("nem: ", {nem})
+                        time.sleep(3)
+                        os.system("cls")
+                        break
+                    
+                    
+                except:
+                    print("el rut ingresado no esta validado en el sistema :( intente nuevamente ")
+            
+            
+            
+            
+                
+    
+    
+    
+    
+    
     except:
-        print("opcion no existe")
-print("Ha salido del sistema")
+        print("opcion ingresada no valida ")
+        
