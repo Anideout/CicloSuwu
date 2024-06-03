@@ -1,106 +1,151 @@
-import time, os
+import os, time 
+
+pacientes = []
 banderaMenu = True
-usu1= None 
-usu2=None 
-usu3=None
-con1= None 
-con2=None 
-con3= None
 
 while banderaMenu:
-    print("1. Iniciar Sesion")
-    print("2. Registrar Usuario")
-    print("3. Salir")
+    os.system("cls")
+    print("1) Registrar Paciente")
+    print("2) Atencion Paciente")
+    print("3) Gestionar Paciente")
+    print("4) Salir")
     try:
-        opcion = int(input("ingrese opcion\n"))
-        if opcion ==1 :
-            os.system("cls")
-            print("1. Iniciar Sesion")
-            if (usu1 is None and con1 is None) and (usu2 is None and con2 is None)and (usu3 is None and con3 is None):
-                print("No existen usuarios para acceder.")
-                time.sleep(2)
-                continue
-
-            else:
-                username = input("Ingrese su nombre de usuario: \n")
-                password = input("Ingrese su contraseña: \n")
-                if (username == usu1 and password == con1) or (username == usu2 and password == con2) or (username == usu3 and password == con3):
-                    os.system("cls")
-                    while True:
-                        print("1. Realizar llamada")
-                        print("2. Enviar correo electrónico")
-                        print("3. Salir")
-                        try:
-                            opcion2 = int(input("Ingrese opción: \n"))
-                            if opcion2 == 1:
-                                os.system("cls")
-                                print("1. Realizar llamada")
-                                numero = input("Por favor, ingresa el número de celular (debe comenzar con 9 y tener 9 dígitos): \n")
-                                if len(numero) == 9 and numero.startswith('9'):
-                                    print("Llamando al número", numero)
-                                    time.sleep(2)
-                                    
-                                else:
-                                    print("El número ingresado no es válido. Debe comenzar con 9 y tener 9 dígitos.\n")
-                                    time.sleep(2)
-                                    
-                            elif opcion2 ==2:
-                                
-                                os.system("cls")
-                                print("2. Enviar correo electrónico")
-                                correo = input("Por favor, ingresa tu correo electrónico: \n")
-                                while '@' not in correo:
-                                    print("El correo electrónico debe contener '@'.")
-                                    correo = input("Por favor, ingresa tu correo electrónico: \n")
-                                print("Correo electrónico guardado:", correo)
-                                time.sleep(2)
-                                os.system("cls")
-                                mensaje = input("ingrese mensaje\n")
-                                print(f"DE: {username}")
-                                print(f"PARA: {correo}")
-                                print(f"MENSAJE: {mensaje}")
-                                break
-                            else:
-                                os.system("cls")
-                                print("3. Salir")
-                                break
-                        except:
-                            print("opcion ingresa no existe :@")
+        opcion = int(input("ingrese una opcion\n"))
+        if opcion == 1:
+            banderaPaciente = True
+            while banderaPaciente:
+                banderaRut = True
+                banderaEdad = True
+                print("Registrar Paciente")
+                os.system("cls")
+                while banderaRut:
+                    rutS = input("ingrese rut\n")
+                    while rutS == "":
+                        rutS = input("ingrese rut, no debe venir vacio\n")
+                    try:
+                        rut = int(rutS)
+                        while rut < 5000000 or rut > 30000000:
+                            rut = int(input("ingrese rut, debe estar en rango 5M Y 30M\n"))
+                        banderaRut = False
+                    except:
+                        print("en campo rut, no se aceptan caracteres")
+                nombre = input("ingrese nombre\n")
+                while nombre == "":
+                    nombre = input("nombre no puede guardarse vacio\n")
+                direccion = input("ingrese direccion\n")
+                while direccion == "":
+                    direccion = input("direccion no puede guardarse vacio\n")
+                correo = input("ingrese correo\n")
+                while "@" not in correo:
+                    correo = input("campo correo debe contener al menos un @\n")
+                while banderaEdad:
+                    try:
+                        edad = int(input("ingrese edad\n"))
+                        if edad > 0 or edad < 110:
+                            print("muy bn ")
+                            banderaEdad = False
+                        else:
+                            print("invalido ta malito ")
+                    except:
+                        print("en campo edad no se aceptan caracteres")
+                sexo = input("ingrese sexo\n").lower()
+                while sexo != 'f' and sexo != 'm':
+                    sexo = input("ingrese sexo 'f' o 'm'\n").lower()
+                #registro lo creare si el paciente asiste a la consulta
+                prevision = input("ingrese su prevision\n").lower()
+                while prevision != "fonasa" and prevision != "isapre":
+                    prevision = input("ingrese su prevision\n").lower()
+                paciente = [rut, nombre, direccion, correo, edad, sexo, prevision]
+                pacientes.append(paciente)
+                otroPaciente = int(input("deseas agregar otro paciente?  1.Si  2.No\n"))
+                if otroPaciente == 1:
+                    continue
+                else:
+                    banderaPaciente = False
+                print(pacientes)
+                x = input("enter para continuar")
         elif opcion == 2:
             os.system("cls")
-            print("2. Registrar Usuario")
-            usu1 = input("ingrese usuario\n")
-            con1 = input("ingrese clave\n")
-            opc = int(input("desea agregar mas usuarios?  1.si  2.no\n"))
-            if opc == 1:
-                usu2 = input("ingrese usuario\n")
-                con2 = input("ingrese clave")
-                opc = int(input("desea agregar mas usuarios?  1.si  2.no\n"))
-                if opc == 1:
-                    usu3 = input("ingrese usuario\n")
-                    con3 = input("ingrese clave")
-                    print(f"usuario: {usu1}")
-                    print(f"clave: ******")
-                    print(f"usuario: {usu2}")
-                    print(f"clave: ******")
-                    print(f"usuario: {usu3}")
-                    print(f"clave: ******")
-                else:
-                    print(f"usuario: {usu1}")
-                    print(f"clave: ******")
-                    print(f"usuario: {usu2}")
-                    print(f"clave: ******")
-            else:
-                print(f"usuario: {usu1}")
-                print(f"clave: ******")
+            print("Atencion Paciente")
+            rutBuscar = int(input("ingrese rut a atender\n"))
+            for paciente in pacientes:
+                if paciente[0] == rutBuscar:
+                    print("adelante ", paciente[1])
+                    registro = input("ingresar sintomas\n")
+                    while registro == "":
+                        registro = input("ingresar sintomas\n")
+                    paciente.append(registro)
+                    print(paciente)
+                    input("enter para continuar")
         elif opcion == 3:
-            os.system("cls")
-            print("3. Salir")
+            print("Gestionar Paciente")
+            banderaSubMenu = True
+            while banderaSubMenu:
+                print("1) Consultar datos Paciente")
+                print("2) Modificar Paciente")
+                print("3) Eliminar Paciente")
+                print("4) Regresar Menu Principal")
+                try:
+                    opcion2 = int(input("ingrese opcion\n"))
+                    if opcion2 == 1:
+                        print("Consultar datos Paciente")
+                        rut_consultar = int(input("ingrese rut de paciente\n"))
+                        paciente_encontrado = None
+                        for paciente in pacientes:
+                            if paciente[0] == rut_consultar:
+                                paciente_encontrado = paciente
+                                break
+                        if paciente_encontrado:
+                            print("paciente encontrado...")
+                            print("Rut: ", paciente_encontrado[0])
+                            print("Nombre: ", paciente_encontrado[1])
+                            print("Direccion: ", paciente_encontrado[2])
+                            print("Correo: ", paciente_encontrado[3])
+                            print("Edad: ", paciente_encontrado[4])
+                            print("Sexo: ", paciente_encontrado[5])
+                            print("Prevision: ", paciente_encontrado[6])
+                            print("Registro: ", paciente_encontrado[7])  
+                        else:
+                            print("segun los registros, el rut no existe en nuestra bbdd")    
+                        input("enter para continuar...")
+                    elif opcion2 == 2:
+                        print("2) Modificar Paciente")
+                        rut_editar = int(input("ingrese rut paciente\n"))
+                        paciente_editado = None
+                        for paciente in pacientes:
+                            if paciente[0] == rut_editar:
+                                paciente_editado = paciente
+                        if paciente_editado:
+                            campo = input("ingrese el campo que desea editar (nombre, direccion, correo, edad, sexo, prevision)")
+                            if campo in ['nombre', 'direccion', 'correo', 'edad', 'sexo', 'prevision']:
+                                nuevo_valor = input(f"ingrese valor para el campo {campo}")
+                                if campo == 'edad':
+                                    nuevo_valor = int(nuevo_valor)
+                                    paciente_editado[4] = nuevo_valor
+                                if campo == 'nombre':
+                                    paciente_editado[1] = nuevo_valor
+                    elif opcion2 == 3:
+                        print("Eliminar Paciente")
+                        rut_eliminar = int(input("ingrese rut de paciente\n"))
+                        for paciente in pacientes:
+                            if paciente[0] == rut_eliminar:
+                                try:
+                                    pacientes.remove(paciente)
+                                    print("paciente eliminado con exito...")
+                                    time.sleep(1)
+                                except:
+                                    print("segun los registros, no existe rut")  
+                    elif opcion2 == 4:
+                        print("regresando al menu principal...")
+                        time.sleep(1)
+                        banderaSubMenu = False
+                except:
+                    print("opcion ingresada no es valida")
+                
+                
+        elif opcion == 4:
+            print("Ha salido del sistema…")
+            x = input("enter para salir...")
             banderaMenu = False
-        else:
-            print("opcion  no valida")
     except:
-        print("opcion ingresada no exisate")
-print("shao, loh vimoh")        
-        
-       
+        print("opcion no es valida")
