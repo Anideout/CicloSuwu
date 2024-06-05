@@ -1,4 +1,4 @@
-# #funcion sin argumento y sin retorno 
+-# #funcion sin argumento y sin retorno 
 import os, time
 os.system("cls")
 def saludar():
