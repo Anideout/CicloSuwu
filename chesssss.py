@@ -53,9 +53,9 @@ while bool:
                     highlight_square(board, move.to_square)
                     print(board)
                 else:
-                    print("Invalid move")
+                    print("be")
             except:
-                print("Invalid move")
+                print("uwu")
 
         if board.is_checkmate():
             print("-------------\nCHECKMATE \n --------")
@@ -75,7 +75,7 @@ while bool:
             print("Invalid option")
 
     except:
-        print("\nInvalid move\n")
+        print("\nMaravillosa Jugada! \n")
         print("n{}".format(board))
 
 def highlight_square(board, square):
