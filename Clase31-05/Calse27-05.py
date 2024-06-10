@@ -229,7 +229,7 @@ while banMen1:
                             for paciente in registrosP:
                                 if paciente["Rut"] == rut_pac:
                                     os.system("cls")
-                                    print(f"\nRut: {paciente["Rut"]}")
+                                    print(f"Rut: {paciente["Rut"]}")
                                     print(f"Nombre: {paciente["Nombre"]}")
                                     print(f"Dirección: {paciente["Direccion"]}")
                                     print(f"Correo: {paciente["Correo"]}")

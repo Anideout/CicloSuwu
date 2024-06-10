@@ -32,14 +32,14 @@ while True:
 			print(f'{asientos[i+2]}', end='\t')
 			print(f'{asientos[i+3]}')
 
-	resp = input('\nelige un asiento (o \'q\' para salir, \'v\' para ver sus asientos comprados): ')
 
+	resp = input('\nelige un asiento (o \'q\' para salir, \'v\' para ver sus asientos comprados): ')
+	
 	if resp in asientos and resp is not 'x' and resp is not 'X':
 		asientos[int(resp)-1] = 'X' # int() convierte a numero entero
 		comprados.append(resp) # el asiento comprado se almacena en la lista de comprados
 		clear()
 		input(f'se ha comprado el asiento {resp}.\npresione enter para continuar...')
-
 	# lower() convierte a minuscula y con "elif resp.lower() is 'v'"
 	# tendria q haber sido suficiente pero no me quizo pescar python XD
 	elif resp is 'v' or resp is 'V':
