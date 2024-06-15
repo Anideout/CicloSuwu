@@ -84,3 +84,7 @@ def highlight_square(board, square):
     rank_name = "ABCDEFGH"[rank]
     file_name = "12345678"[file]
     print("\033[1;31m" + rank_name + file_name + "\033[0m", end=" ")
+    
+    
+    
+    
