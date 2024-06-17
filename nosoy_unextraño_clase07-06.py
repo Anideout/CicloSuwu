@@ -47,8 +47,7 @@ while menu:
             while banrut:
                 try:
                     rut = int(input('Ingrese su rut sin digito verificador por favor!\n'))
-                    if rut >= 5000000 and rut <= 99999999:
-                        clear()
+                    if rut >= 5000000 or rut <= 99999999:
                         print('Rut ingresado correctamente!')
                         banrut = False
                     else:

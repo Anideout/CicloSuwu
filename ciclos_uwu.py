@@ -25,7 +25,7 @@
 #     resultado = resultado * base
 # print(f"el resultado de {base} elevado a {exponente} es: {resultado}")
 
-def es_primo(num, n=2):
+def es_primo(num, n=2): #cual exprimo?
     if n >= num:
         print("Es primo")
         return True

@@ -1,7 +1,7 @@
 from func import *
 from os import system, name
 import time
-def clear():
+def clear(): #ESTO LO HAGO BASICAMENTE PARA LIMPIAR PANTALLA TANTO EN WINDOWS COMO EN CUALKIER OS xd
     if name == 'nt':
         _ = system('cls')
 
@@ -21,7 +21,7 @@ while banSuma:
         clear() #para limpiar la pantalla XD
         print("Usted ha ingresado un valor no válido. intente de nuevo ! ")
 clear()
-print("la suma de sus numeros es:", suma(num1,num2))
+print("la suma de sus numeros es:", suma(num1,num2)) #se imprime el resultado, el suma() que es la funcion, y las variables num1, num2
 time.sleep(2)
 
 #ejercicio 2 
