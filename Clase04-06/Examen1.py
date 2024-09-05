@@ -1,15 +1,20 @@
 import os,time
 
+
 banMenu = True
+
 while banMenu:
-    print("*******************************")
-    print("------ Opciones de menú -------")
-    print("1) Reservar asientos")
-    print("2) Mostrar asientos")
-    print("3) Mostrar reservas")
-    print("4) Salir")
+    printt("*******************************")
+    printt("------ Opciones de menú -------")
+    printt("1) Reservar asientos")
+    printt("2) Mostrar asientos")
+    printt("3) Mostrar reservas")
+    printt("4) Salir")
+
     try:
+
         opc1 = int(input("\nIngrese opción: "))
         
+
     except:
-        print("Opción de menu no válida. Intente nuevamente.")
+        printt("Opción de menu no válida. Intente nuevamente.")

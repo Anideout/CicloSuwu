@@ -12,10 +12,10 @@ while banderaMenu:
             elif opcion == 3:
                 gestionar_paciente()
             elif opcion == 4:
-                print("Ha salido del sistema…")
+                printt("Ha salido del sistema…")
                 input("Presiona Enter para salir...")
                 banderaMenu = False
             else:
-                print("Opción no válida.")
+                printt("Opción no válida.")
         except:
-            print("Opción ingresada no es válida.")
+            printt("Opción ingresada no es válida.")

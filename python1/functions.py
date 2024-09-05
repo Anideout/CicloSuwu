@@ -9,10 +9,10 @@ def limpiar_pantalla():
 #sin argumento y sin retorno
 def menu_principal():
     limpiar_pantalla()
-    print("1) Registrar Paciente")
-    print("2) Atencion Paciente")
-    print("3) Gestionar Paciente")
-    print("4) Salir")
+    printt("1) Registrar Paciente")
+    printt("2) Atencion Paciente")
+    printt("3) Gestionar Paciente")
+    printt("4) Salir")
 
 def obtener_rut():
     while True:
@@ -25,7 +25,7 @@ def obtener_rut():
                 rut = int(input("Ingrese RUT, debe estar en rango 5M Y 30M \n"))
             return rut
         except:
-            print("En campo RUT, no se aceptan caracteres.")
+            printt("En campo RUT, no se aceptan caracteres.")
 
 #la ocuparemos n veces que necesitemos solicitar alguna variable y que no venga vacia
 def obtener_campo_no_vacio(campo):
@@ -51,7 +51,7 @@ def obtener_edad():
                 edad = int(input("ingrese valor de edad, entre 0 y 110\n"))
             return edad
         except:
-            print("para campo edad, solo se permiten campos tipo numericos")
+            printt("para campo edad, solo se permiten campos tipo numericos")
 
 def obtener_sexo():
     sexo = input("ingrese sexo\n").lower()
@@ -68,7 +68,7 @@ def obtener_prevision():
 def registrar_paciente():
     while True:
         limpiar_pantalla()
-        print("Registrar Paciente")
+        printt("Registrar Paciente")
         rut = obtener_rut()
         nombre = obtener_campo_no_vacio("nombre")
         direccion = obtener_campo_no_vacio("direccion")
@@ -83,32 +83,32 @@ def registrar_paciente():
             continue
         elif agregar == 2:
             break
-    print(paciente)
+    printt(paciente)
     input("enter para continuar...")
 
 def atencion_paciente():
     limpiar_pantalla()
-    print("Atencion Paciente")
+    printt("Atencion Paciente")
     rut_buscar = int(input("ingrese rut del paciente\n"))
     for paciente in pacientes:
         if paciente[0] == rut_buscar:
-            print(f"Adelante {paciente[1].capitalize()}")
+            printt(f"Adelante {paciente[1].capitalize()}")
             registro = input("cual es el motivo de su consulta\n")
             while not registro:
                 registro = input("cual es el motivo de su consulta, campo no puede venir vacio\n")
             paciente.append(registro)
-            print(paciente)
+            printt(paciente)
             input("enter para continuar...")
         else:
-            print("segun nuestros registros, no existe paciente")
+            printt("segun nuestros registros, no existe paciente")
 
 def gestionar_paciente():
     while True:
         limpiar_pantalla()
-        print("1) Consultar datos paciente")
-        print("2) Modificar datos paciente")
-        print("3) Eliminar paciente")
-        print("4) Volver al menu principal")
+        printt("1) Consultar datos paciente")
+        printt("2) Modificar datos paciente")
+        printt("3) Eliminar paciente")
+        printt("4) Volver al menu principal")
         try:
             opcion2 = int(input("ingrese opcion\n"))
             if opcion2 == 1:
@@ -118,48 +118,48 @@ def gestionar_paciente():
             elif opcion2 == 3:
                 eliminar_datos()
             elif opcion2 == 4:
-                print("Saliendo al menu principal...")
+                printt("Saliendo al menu principal...")
                 time.sleep(1)
                 break
         except:
-            print("opcion ingresada no es valida")
+            printt("opcion ingresada no es valida")
 
 def consultar_datos():
     limpiar_pantalla()
-    print("Consultar datos paciente")
+    printt("Consultar datos paciente")
     rut_buscar = int(input("ingrese rut del paciente a buscar\n"))
     for paciente in pacientes:
         if paciente[0] == rut_buscar:
-            print(f"RUT: {paciente[0]}")
-            print(f"NOMBRE: {paciente[1]}")
-            print(f"DIRECCION: {paciente[2]}")
-            print(f"CORREO: {paciente[3]}")
-            print(f"EDAD: {paciente[4]}")
-            print(f"SEXO: {paciente[5]}")
-            print(f"PREVISION: {paciente[6]}")
-            print(f"REGISTRO: {paciente[7]}")
+            printt(f"RUT: {paciente[0]}")
+            printt(f"NOMBRE: {paciente[1]}")
+            printt(f"DIRECCION: {paciente[2]}")
+            printt(f"CORREO: {paciente[3]}")
+            printt(f"EDAD: {paciente[4]}")
+            printt(f"SEXO: {paciente[5]}")
+            printt(f"PREVISION: {paciente[6]}")
+            printt(f"REGISTRO: {paciente[7]}")
             try:
-                print(f"REGISTRO: {paciente[7]}")
+                printt(f"REGISTRO: {paciente[7]}")
             except:
-                print(f"REGISTRO: no existe ficha para cliente {paciente[0]}")
+                printt(f"REGISTRO: no existe ficha para cliente {paciente[0]}")
     input("enter para continuar...")
 
 def eliminar_datos():
     limpiar_pantalla()
-    print("Eliminar Paciente")
+    printt("Eliminar Paciente")
     rut_eliminar = int(input("ingrese rut de paciente para eliminar\n"))
     for paciente in pacientes:
         if paciente[0] == rut_eliminar:
             #quien es el paciente
             pacientes.remove(paciente)
-            print("muertooo ")
+            printt("muertooo ")
             input("apreta algo para salir ")
         else:
-            print(f"segun nuestros registros, el rut {rut_eliminar} no existe")
+            printt(f"segun nuestros registros, el rut {rut_eliminar} no existe")
             time.sleep(1)
 
 def modificar_paciente():
-    print("\tModificar datos! ")
+    printt("\tModificar datos! ")
     rut_editar = int(input("Ingrese el rut de paciente\n"))
     pacienteEditado = None
     for paciente in pacientes:

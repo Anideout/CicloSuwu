@@ -33,8 +33,8 @@ if opcion == 1:
     acumuladorPrecio += 2500
 opcion = int(input("desea llevar pan de molde por $1340     1.si     2.no\n"))
 
-print(f"cantidad de productos: {contadorProductos}")
-print(f"total provisorio: ${acumuladorPrecio}")
+printt(f"cantidad de productos: {contadorProductos}")
+printt(f"total provisorio: ${acumuladorPrecio}")
 preferencial = int(input("es acaso usted un cliente preferencial?    1.si uwu   2.no unu\n"))
 if preferencial == 1:
     total = acumuladorPrecio
@@ -42,16 +42,16 @@ if preferencial == 1:
 else:
     total = acumuladorPrecio
     descuento = 0
-print(f"descuento: ${descuento}")
-print(f"total a pagar: ${total}")
+printt(f"descuento: ${descuento}")
+printt(f"total a pagar: ${total}")
 pago = int(input("ingrese una forma de pago 1.efectivo   2. credito/debito\n"))
 if pago == 1:
     efectivo = int(input("ingrese valor efectivo"))
     if efectivo < total:
-        print("saldo insuficiente, cagaste")
+        printt("saldo insuficiente, cagaste")
     else:
         vuelto = efectivo - total
-        print("muchas gracias uwu ")
-        print(f"su vuelto es: ${vuelto}")
+        printt("muchas gracias uwu ")
+        printt(f"su vuelto es: ${vuelto}")
 else:
-    print("no olvide llevar su voucher ")
+    printt("no olvide llevar su voucher ")

@@ -46,7 +46,7 @@
 # x = input("Ingresa un número: ") # El usuario ingresa un 2
 # print(type(x))
 var = 0  # Asignando 0 a var
-print(var != 0)
+printt(var != 0)
  
 var = 1  # Asignando 1 a var
-print(var != 0)
+printt(var != 0)

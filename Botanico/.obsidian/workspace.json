@@ -1,0 +1,196 @@
+{
+  "main": {
+    "id": "4d202e000cab06d6",
+    "type": "split",
+    "children": [
+      {
+        "id": "caa07cf851b5ddf0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1431db46bffa9d1a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Conclusiones.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "031d618e14daa91c",
+    "type": "split",
+    "children": [
+      {
+        "id": "3693f50e26219681",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "de66ccb5590af124",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "4e0e275a77ae6ea4",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "5225027accf1fd3e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "17ec56e292744108",
+    "type": "split",
+    "children": [
+      {
+        "id": "9289ea1d484f899b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f6edc47e140c43cd",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Conclusiones.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "1cfaaa93673347a1",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Conclusiones.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "369087b3d8e5e17c",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "60d12965dec7c26d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Conclusiones.md"
+              }
+            }
+          },
+          {
+            "id": "0e27c3f90433c728",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
+    }
+  },
+  "active": "de66ccb5590af124",
+  "lastOpenFiles": [
+    "inovando.md",
+    "C Programming/C fundamentos.md",
+    "C Programming/introducción C.md",
+    "Conexión bancaría/Mockup.md",
+    "Conexión bancaría/Landing Page.md",
+    "Parque MismaSeria/Busca y pierde.md",
+    "Parque MismaSeria/CINE.md",
+    "Te amo lorenza.md",
+    "Sin título.md",
+    "Sin título 1.md",
+    "probandingg hola.md",
+    "ORDEN DE COMANDOS Evaluacion 3 de CLOUD.md",
+    "Love's Secret Domain.md",
+    "Conclusiones.md",
+    "Parque MismaSeria/Sin escrupulos.md",
+    "Parque MismaSeria/MismoQuerer.md",
+    "Parque MismaSeria/Lejos..md",
+    "Parque MismaSeria/graffiti.md",
+    "Parque MismaSeria/Flor del Mal.md",
+    "Parque MismaSeria/Estatuas del (Des)Amor.md",
+    "Parque MismaSeria/No soy un extraño.md",
+    "Parque MismaSeria/Parque Mismaseria.md",
+    "Conexión bancaría/Respuestas.md",
+    "Conexión bancaría/Preguntas.md",
+    "Conexión bancaría/Abrir instancia en ec2.md",
+    "Parque MismaSeria/Sin título.canvas",
+    "Parque MismaSeria",
+    "Conexión bancaría/MPV/storytelling.md",
+    "C Programming",
+    "inovando",
+    "Conexión bancaría/Sin título.canvas",
+    "Conexión bancaría/MPV",
+    "Sin título.canvas",
+    "Conexión bancaría/Sin título 1.canvas",
+    "Conexión bancaría"
+  ]
+}

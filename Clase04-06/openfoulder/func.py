@@ -15,10 +15,10 @@ def suma(num1, num2):
 #Funcion ejercicio 2 
 def es_par(num1):
     if num1 % 2 == 0:
-        print("es par! ")
+        printt("es par! ")
         return True
     else:
-        print("es impar! ")
+        printt("es impar! ")
         return False
 
 #Funcion ejercicio 3 

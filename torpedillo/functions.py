@@ -78,3 +78,14 @@ def salir():
     print("saliendo...")
     time.sleep(1)
     
+def buscar_alumno():
+    clear()
+    print("\nBuscar alumno!")
+    id_buscarr = input("Ingrese i del alumno a buscar! \n")
+    for estudiante in estudiantes:
+        if estudiante[0] == id_buscarr:
+            print(f"ID: \n{estudiante[0]}")
+            print(f"NOMBRE: \n{estudiante[1]}")
+            print(f"EDAD: \n{estudiante[2]}")
+        input("Enter para continuar... ")
+        

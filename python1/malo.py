@@ -18,9 +18,9 @@ while banMenu:
             gestionar_paciente()
         elif opc == 4:
             clear()
-            print("Ha salido del sistema... ")
+            printt("Ha salido del sistema... ÑPO21")
             input("Presione enter para salir...")
         else:
-            print("Opcion no valida! ")
+            printt("Opcion no valida! ")
     except:
-        print("Opcion ingresada no es valida")
+        printt("Opcion ingresada no es valida")

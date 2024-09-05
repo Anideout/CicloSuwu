@@ -16,4 +16,4 @@ for i in range(3):
 #len en general significa el largo de un string
 #y \n adentro de un string es solo una linea en blanco XD
 mas_largo = max(lista, key=len)
-print(f'El nombre más largo es: {mas_largo}')
+printt(f'El nombre más largo es: {mas_largo}')

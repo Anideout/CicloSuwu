@@ -19,9 +19,9 @@ while banSuma:
 
     except: #en caso de no cumplir la condicion de int(enteros) te tira a except, pidiendote que lo vuelvas a intentar 
         clear() #para limpiar la pantalla XD
-        print("Usted ha ingresado un valor no válido. intente de nuevo ! ")
+        printt("Usted ha ingresado un valor no válido. intente de nuevo ! ")
 clear()
-print("la suma de sus numeros es:", suma(num1,num2)) #se imprime el resultado, el suma() que es la funcion, y las variables num1, num2
+printt("la suma de sus numeros es:", suma(num1,num2)) #se imprime el resultado, el suma() que es la funcion, y las variables num1, num2
 time.sleep(2)
 
 #ejercicio 2 
@@ -33,9 +33,9 @@ while banPar:
         banPar = False
     except:
         clear()
-        print('Usted a ingresar un valor no valido, intente nuevamente!!! ')
+        printt('Usted a ingresar un valor no valido, intente nuevamente!!! ')
 clear()
-print(es_par(num1))
+printt(es_par(num1))
 time.sleep(2)
 
 #Ejercicio 3 
@@ -46,10 +46,10 @@ while banFah:
         temp = int(input("INgrese su temperatura! (en °C):\n"))
         banFah = False
     except:
-        print("Usted ha ingresado un valor no valido, intente de nuevo por favor ! ")
+        printt("Usted ha ingresado un valor no valido, intente de nuevo por favor ! ")
 
 clear()
-print('su temperatura en a grados fahrenheit es',celsius_a_fahrenheit(temp))
+printt('su temperatura en a grados fahrenheit es',celsius_a_fahrenheit(temp))
 time.sleep(2)
 
 #ejercicio 3 
@@ -65,15 +65,15 @@ while banMax:
 
     except:
         clear()
-        print("usted ha ingresado un valor no valido, recuerde que tiene que ser numeros enteros! ")
+        printt("usted ha ingresado un valor no valido, recuerde que tiene que ser numeros enteros! ")
 
 clear()
-print(max_de_tres(num1,num2,num3))
+printt(max_de_tres(num1,num2,num3))
 time.sleep(2)
 
 #ejercicio 4 
 clear()
 nombre = input("\nIngrese su nombre! ")
 clear()
-print(validar_nombre(nombre))
+printt(validar_nombre(nombre))
 time.sleep(2)

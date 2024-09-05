@@ -6,9 +6,9 @@ while True:
     try:
         opcion = int(input("ingrese opcion\n"))
         if opcion == 1:
-            registrar_estudiante()
+            
         elif opcion == 2:
-            print("buscar estudiante")
+            buscar_alumno()
         elif opcion == 3:
             print("imprimir certificados")
         elif opcion == 4:
